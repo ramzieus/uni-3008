@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIFORCE - UNI3008 JAMMING SYSTEM</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body class="select-none">
+    <div class="">
+        <!-- Header -->
+        <header class="flex justify-between px-8 items-center bg-[#414042] h-[77px]">
+            <div class="flex">
+                <div class="w-4 h-4 rounded-full bg-red-500 mr-2"></div>
+                <div class="w-4 h-4 rounded-full bg-yellow-500 mr-10"></div>
+                <a href="#" class="text-gray-300 hover:text-white mr-4">JAMMING BANDS</a>
+                <a href="#" class="text-gray-300 hover:text-white mr-4">HELP CENTER</a>
+                <a href="#" class="text-orange-500 hover:text-orange-400">RADAR INFORMATION</a>
+            </div>
+            <div class="flex items-center space-x-2 text-white">
+                <span class="mr-4">UNIFORCE - UNI3008 JAMMING SYSTEM</span>
+                <div class="w-4 h-4 bg-green-500"></div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="relative">
+            <!-- Radar Grid -->
+            <div class="bg-blue-900 bg-opacity-50 h-[92vh] relative">
+                <!-- Grid lines would be added here -->
+                <!-- Scale numbers would be positioned absolutely -->
+                <div id="map" class=""></div>
+            </div>
+            <div class="absolute bottom-0 left-0 bg-blue-900 bg-opacity-40 w-full h-full" style="z-index: 999;"></div>
+
+            <div class="absolute bottom-0 left-0 right-0 flex justify-center mb-44 mx-auto"
+                style="z-index: 999999; height: 76%; width: 50%;">
+                <img src="assets/images/radar.svg" alt="">
+                <img id="waves" src="assets/images/waves.svg" alt="" class="absolute bottom-32 hidden mb-[-60px]">
+                <img id="center-panel" src="assets/images/center_panel/center-panel-0.svg" alt=""
+                    class="absolute bottom-0 w-48 mb-[-54px]">
+                <p id="tilt-value" class="absolute bottom-[20px] left-[300px] text-white text-3xl font-bold">0˚</p>
+                <p id="pan-value" class="absolute bottom-[20px] right-[300px] text-white text-3xl font-bold">0˚</p>
+            </div>
+
+            <!-- Control Panel -->
+            <div id="control-panel" class="absolute bottom-0 left-0 right-0 flex justify-between items-end">
+                <!-- Left Control -->
+                <div class="relative w-32 h-32 bottom-36 mx-auto">
+                    <div class="absolute inset-0 rounded-full">
+
+                        <div class="relative">
+                            <img src="assets/images/controller_core.svg" alt="" class="scale-[2]">
+                            <img id="tilt" src="assets/images/tilt/tilt-0.svg" alt=""
+                                class="absolute inset-0 m-auto pb-10 scale-150">
+                        </div>
+                    </div>
+                    <div class="absolute left-[-90px] top-1/2 transform -translate-y-1/2 w-16 h-16 cursor-pointer">
+                        <img id="tilt-minus" src="assets/images/tilt_minus.svg" alt="">
+                    </div>
+                    <div class="absolute right-[-90px] top-1/2 transform -translate-y-1/2 w-16 h-16 cursor-pointer">
+                        <img id="tilt-plus" src="assets/images/tilt_plus.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- Center Controls -->
+                <div class="flex space-x-2 mb-4 mx-auto">
+                </div>
+
+                <!-- Right Control -->
+                <div class="relative w-32 h-32 bottom-36 mx-auto">
+
+                    <div class="absolute inset-0 rounded-full">
+                        <img src="assets/images/controller_core.svg" alt="" class="scale-[2]">
+                        <img id="pan" src="assets/images/panel-pan/close-panel/close-panel-0.svg" alt=""
+                            class="absolute inset-0 scale-150">
+                    </div>
+                    <div class="absolute left-[-90px] top-1/2 transform -translate-y-1/2 w-16 h-16 cursor-pointer">
+                        <img id="pan-minus" src="assets/images/pan_left.svg" alt="">
+                    </div>
+                    <div class="absolute right-[-90px] top-1/2 transform -translate-y-1/2 w-16 h-16 cursor-pointer">
+                        <img id="pan-plus" src="assets/images/pan_right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zoom Controls -->
+            <div class="fixed top-[40%] right-4 flex flex-col bg-gray-800 text-white rounded-lg overflow-hidden"
+                style="z-index: 99999;">
+                <button class="px-2 py-1 hover:bg-gray-700">+</button>
+                <button class="px-2 py-1 hover:bg-gray-700">-</button>
+            </div>
+
+            <!-- Compass -->
+            <div class="fixed top-[30%] right-4 bg-gray-800 rounded-full w-8 h-8 flex cursor-pointer items-center justify-center"
+                style="z-index: 99999;">
+                <img src="assets/images/compass.svg" alt="" class="h-7">
+            </div>
+        </main>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

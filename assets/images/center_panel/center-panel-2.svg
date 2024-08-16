@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-16e38b87-7bd4-46c6-8f14-1babf84ff37b" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.96 139.93">
+  <defs>
+    <style>
+      .uuid-2bf7ff8e-62d0-46b9-942e-89afaf712bd7 {
+        fill: #8d8776;
+      }
+
+      .uuid-2bf7ff8e-62d0-46b9-942e-89afaf712bd7, .uuid-d0dbb7d6-7b7c-4652-80ac-45ddf973d302, .uuid-aaf593d4-6875-4797-bdd6-8b0ee0dda2d7, .uuid-7ca30d4b-e85a-4125-844c-e26e70c2490a, .uuid-6a149df7-eec9-4dae-aa8e-1ad3762cdd3b {
+        stroke-width: 0px;
+      }
+
+      .uuid-d0dbb7d6-7b7c-4652-80ac-45ddf973d302 {
+        fill: #d0d2d3;
+      }
+
+      .uuid-aaf593d4-6875-4797-bdd6-8b0ee0dda2d7 {
+        fill: #b5b0a5;
+      }
+
+      .uuid-7ca30d4b-e85a-4125-844c-e26e70c2490a {
+        fill: #6c6555;
+      }
+
+      .uuid-6a149df7-eec9-4dae-aa8e-1ad3762cdd3b {
+        fill: #5a5448;
+      }
+    </style>
+  </defs>
+  <polygon class="uuid-6a149df7-eec9-4dae-aa8e-1ad3762cdd3b" points="186.62 116.27 186.62 0 175.42 0 43.54 0 32.34 0 32.34 116.27 48.81 139.93 170.16 139.93 186.62 116.27"/>
+  <rect class="uuid-d0dbb7d6-7b7c-4652-80ac-45ddf973d302" x="32.34" y="0" width="154.29" height="95.87"/>
+  <polygon class="uuid-7ca30d4b-e85a-4125-844c-e26e70c2490a" points="177.55 116.26 181.78 123.23 186.62 116.26 186.62 95.87 177.55 95.87 177.55 116.26"/>
+  <polygon class="uuid-7ca30d4b-e85a-4125-844c-e26e70c2490a" points="41.42 116.26 37.18 123.23 32.34 116.26 32.34 95.87 41.42 95.87 41.42 116.26"/>
+  <rect class="uuid-2bf7ff8e-62d0-46b9-942e-89afaf712bd7" x="41.42" y="95.87" width="136.13" height="20.38"/>
+  <rect class="uuid-2bf7ff8e-62d0-46b9-942e-89afaf712bd7" x="41.42" y="9.08" width="136.13" height="77.72"/>
+  <polygon class="uuid-aaf593d4-6875-4797-bdd6-8b0ee0dda2d7" points="32.34 0 41.42 9.08 177.55 9.08 186.62 0 32.34 0"/>
+  <polygon class="uuid-6a149df7-eec9-4dae-aa8e-1ad3762cdd3b" points="186.62 95.87 177.55 86.79 41.42 86.79 32.34 95.87 186.62 95.87"/>
+  <polygon class="uuid-7ca30d4b-e85a-4125-844c-e26e70c2490a" points="32.34 0 32.34 95.87 41.42 86.79 41.42 9.08 32.34 0"/>
+  <polygon class="uuid-7ca30d4b-e85a-4125-844c-e26e70c2490a" points="186.62 95.87 186.62 0 177.55 9.08 177.55 86.79 186.62 95.87"/>
+</svg>

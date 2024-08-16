@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-4c54de52-b5ff-4f0a-aeb8-6e7edf5d96ba" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.96 139.93">
+  <defs>
+    <style>
+      .uuid-87c7b8e6-2aeb-41d6-a591-b1e7e21dc907 {
+        fill: #3b3428;
+      }
+
+      .uuid-87c7b8e6-2aeb-41d6-a591-b1e7e21dc907, .uuid-94e2dc58-7d47-46ef-9bb0-d53c238db284, .uuid-47a76931-6e97-42f9-9d9c-b0493f0fff26, .uuid-1b0ecc84-dea1-426f-ba60-5d19d628d2bd, .uuid-aaf8fcee-fb6f-4e86-bae6-5163ef25229c, .uuid-d4b0444a-02c1-47a6-8a4e-4a8e70a679a9 {
+        stroke-width: 0px;
+      }
+
+      .uuid-94e2dc58-7d47-46ef-9bb0-d53c238db284 {
+        fill: #8d8776;
+      }
+
+      .uuid-47a76931-6e97-42f9-9d9c-b0493f0fff26 {
+        fill: #7b7460;
+      }
+
+      .uuid-1b0ecc84-dea1-426f-ba60-5d19d628d2bd {
+        fill: #6c6555;
+      }
+
+      .uuid-aaf8fcee-fb6f-4e86-bae6-5163ef25229c {
+        fill: #cdc3b1;
+      }
+
+      .uuid-d4b0444a-02c1-47a6-8a4e-4a8e70a679a9 {
+        fill: #5a5448;
+      }
+    </style>
+  </defs>
+  <polygon class="uuid-d4b0444a-02c1-47a6-8a4e-4a8e70a679a9" points="186.25 116.27 186.25 0 175.04 0 43.16 0 31.96 0 31.96 116.27 48.43 139.93 169.78 139.93 186.25 116.27"/>
+  <rect class="uuid-87c7b8e6-2aeb-41d6-a591-b1e7e21dc907" x="31.96" width="154.29" height="95.87"/>
+  <polygon class="uuid-1b0ecc84-dea1-426f-ba60-5d19d628d2bd" points="177.17 116.26 181.4 123.23 186.25 116.26 186.25 95.87 177.17 95.87 177.17 116.26"/>
+  <polygon class="uuid-1b0ecc84-dea1-426f-ba60-5d19d628d2bd" points="41.04 116.26 36.8 123.23 31.96 116.26 31.96 95.87 41.04 95.87 41.04 116.26"/>
+  <rect class="uuid-94e2dc58-7d47-46ef-9bb0-d53c238db284" x="41.04" y="95.87" width="136.13" height="20.38"/>
+  <polygon class="uuid-aaf8fcee-fb6f-4e86-bae6-5163ef25229c" points="216.25 53.1 1.96 53.1 31.96 0 186.25 0 216.25 53.1"/>
+  <polygon class="uuid-47a76931-6e97-42f9-9d9c-b0493f0fff26" points="1.96 53.1 0 60.43 218.96 60.43 216.25 53.1 1.96 53.1"/>
+  <polygon class="uuid-d4b0444a-02c1-47a6-8a4e-4a8e70a679a9" points="208.96 76.17 10 76.17 0 60.43 218.96 60.43 208.96 76.17"/>
+</svg>

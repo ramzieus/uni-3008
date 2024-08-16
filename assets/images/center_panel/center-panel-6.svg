@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-be00dcc7-1eae-4611-9ce4-1b1e28001c86" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.96 139.93">
+  <defs>
+    <style>
+      .uuid-21ec4d84-4ca1-4aed-acbf-05f31a86b1e5 {
+        fill: #3b3428;
+      }
+
+      .uuid-21ec4d84-4ca1-4aed-acbf-05f31a86b1e5, .uuid-40fc316d-de86-46a5-92de-5c7284204a71, .uuid-3a2e2fc0-77e6-455b-94d2-db741c9b721a, .uuid-c6e7df19-510e-4829-8a19-a94fcae8b8db, .uuid-fd102bf0-a638-412c-b66c-aa2e0bb2b6c2, .uuid-93b8278b-4423-4d5d-8d9a-3e79ad5972d0 {
+        stroke-width: 0px;
+      }
+
+      .uuid-40fc316d-de86-46a5-92de-5c7284204a71 {
+        fill: #8d8776;
+      }
+
+      .uuid-3a2e2fc0-77e6-455b-94d2-db741c9b721a {
+        fill: #7b7460;
+      }
+
+      .uuid-c6e7df19-510e-4829-8a19-a94fcae8b8db {
+        fill: #6c6555;
+      }
+
+      .uuid-fd102bf0-a638-412c-b66c-aa2e0bb2b6c2 {
+        fill: #cdc3b1;
+      }
+
+      .uuid-93b8278b-4423-4d5d-8d9a-3e79ad5972d0 {
+        fill: #5a5448;
+      }
+    </style>
+  </defs>
+  <polygon class="uuid-93b8278b-4423-4d5d-8d9a-3e79ad5972d0" points="186.25 116.27 186.25 0 175.04 0 43.16 0 31.96 0 31.96 116.27 48.43 139.93 169.78 139.93 186.25 116.27"/>
+  <rect class="uuid-21ec4d84-4ca1-4aed-acbf-05f31a86b1e5" x="31.96" width="154.29" height="95.87"/>
+  <polygon class="uuid-c6e7df19-510e-4829-8a19-a94fcae8b8db" points="177.17 116.26 181.4 123.23 186.25 116.26 186.25 95.87 177.17 95.87 177.17 116.26"/>
+  <polygon class="uuid-c6e7df19-510e-4829-8a19-a94fcae8b8db" points="41.04 116.26 36.8 123.23 31.96 116.26 31.96 95.87 41.04 95.87 41.04 116.26"/>
+  <rect class="uuid-40fc316d-de86-46a5-92de-5c7284204a71" x="41.04" y="95.87" width="136.13" height="20.38"/>
+  <polygon class="uuid-fd102bf0-a638-412c-b66c-aa2e0bb2b6c2" points="203.25 63.1 14.96 63.1 31.96 0 186.25 0 203.25 63.1"/>
+  <polygon class="uuid-93b8278b-4423-4d5d-8d9a-3e79ad5972d0" points="198.96 86.17 20 86.17 10 70.43 208.96 70.43 198.96 86.17"/>
+  <polygon class="uuid-3a2e2fc0-77e6-455b-94d2-db741c9b721a" points="14.96 63.1 10 70.43 208.96 70.43 203.25 63.1 14.96 63.1"/>
+  <polygon class="uuid-3a2e2fc0-77e6-455b-94d2-db741c9b721a" points="31.96 0 14.96 63.1 10 70.43 31.96 0"/>
+  <polygon class="uuid-3a2e2fc0-77e6-455b-94d2-db741c9b721a" points="208.96 70.43 186.25 0 203.25 63.1 208.96 70.43"/>
+</svg>

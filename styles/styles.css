@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'geogtq';
+    src: url('../assets/fonts/Geogtq-Rg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'geogtq', sans-serif;
+    margin: 0;
+    padding: 0;
+    max-height: 80vh;
+    height: 100vh;
+}
+
+#control-panel{
+    background-image: url('../assets/images/controle_panel.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 99999;
+    height: 211px;
+}
+
+#map { height: 100%; width: 100%; }
