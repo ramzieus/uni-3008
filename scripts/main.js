@@ -1,8 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let map = L.map('map').setView([51.505, -0.09], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+    let map = L.map('map', { zoomControl: false }).setView([38.9637, 35.2433], 6);
+    L.tileLayer('assets/turkey/{z}/{x}/{y}.png', {
+        maxZoom: 9,
     }).addTo(map);
+
+    let radarIndex = 1;
+    $('#zoom-in').click(function () {
+        map.zoomIn(1);
+        if (radarIndex != 1){
+            radarIndex = radarIndex - 1;
+        }
+        let radarSrc = `assets/images/radar/radar_${radarIndex}.svg`
+        $('#waves').attr('src', radarSrc)
+        $('#km').html(`${radarIndex * 100} KM`)
+    })
+
+    $('#zoom-out').click(function () {
+        map.zoomOut(1);
+        if (radarIndex != 8){
+            radarIndex = radarIndex + 1;
+        }
+        let radarSrc = `assets/images/radar/radar_${radarIndex}.svg`
+        $('#waves').attr('src', radarSrc)
+        $('#km').html(`${radarIndex * 100} KM`)
+    })
+
+
+
     let tiltIndex = 0;
     let panIndex = 0;
 
@@ -58,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (panIndex != -18) {
             panIndex = panIndex - 1;
         }
-        
+
         let panSrc = '';
         if (tiltIndex > 0) {
             panSrc = `assets/images/panel-pan/open-panel/open-panel-${panIndex}.svg`

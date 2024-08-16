@@ -43,11 +43,12 @@
             <div class="absolute bottom-0 left-0 right-0 flex justify-center mb-44 mx-auto"
                 style="z-index: 999999; height: 76%; width: 50%;">
                 <img src="assets/images/radar.svg" alt="">
-                <img id="waves" src="assets/images/waves.svg" alt="" class="absolute bottom-32 hidden mb-[-60px]">
+                <img id="waves" src="assets/images/radar/radar_1.svg" alt="" class="absolute bottom-32 hidden mb-[-60px] h-[600px]">
                 <img id="center-panel" src="assets/images/center_panel/center-panel-0.svg" alt=""
                     class="absolute bottom-0 w-48 mb-[-54px]">
                 <p id="tilt-value" class="absolute bottom-[20px] left-[300px] text-white text-3xl font-bold">0˚</p>
                 <p id="pan-value" class="absolute bottom-[20px] right-[300px] text-white text-3xl font-bold">0˚</p>
+                <p id="km" class="absolute top-[56px] right-[136px] text-white text-2xl font-bold">100 KM</p>
             </div>
 
             <!-- Control Panel -->
@@ -94,8 +95,8 @@
             <!-- Zoom Controls -->
             <div class="fixed top-[40%] right-4 flex flex-col bg-gray-800 text-white rounded-lg overflow-hidden"
                 style="z-index: 99999;">
-                <button class="px-2 py-1 hover:bg-gray-700">+</button>
-                <button class="px-2 py-1 hover:bg-gray-700">-</button>
+                <button id="zoom-in" class="px-2 py-1 hover:bg-gray-700">+</button>
+                <button id="zoom-out" class="px-2 py-1 hover:bg-gray-700">-</button>
             </div>
 
             <!-- Compass -->
