@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let map = L.map('map', { zoomControl: false }).setView([38.9637, 35.2433], 6);
+    let map = L.map('map', { zoomControl: false }).setView([38.9637, 35.2433], 8);
     L.tileLayer('assets/turkey/{z}/{x}/{y}.png', {
-        maxZoom: 9,
+        maxZoom: 8,
+        minZoom: 1,
     }).addTo(map);
 
     let radarIndex = 1;
