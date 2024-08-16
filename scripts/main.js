@@ -94,6 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
         $('#pan-value').html(`${panIndex * 10}˚`)
     });
 
+    $('.dropdown-button').on('click', function() {
+        $('.dropdown-menu').toggleClass('hidden');
+    });
+
+    // Close the dropdown if clicked outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.dropdown-button').length) {
+            $('.dropdown-menu').addClass('hidden');
+        }
+    });
 
 });
 
