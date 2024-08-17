@@ -1,14 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let map = L.map('map', { zoomControl: false }).setView([38.9637, 35.2433], 8);
+    let map = L.map('map', {
+        center: [0, 0],
+        zoomControl: false,
+        rotate: true,
+        rotateControl: {
+            closeOnZeroBearing: false,
+        },
+        // add rotation deg here 'bearing'
+        bearing: 0,
+    }).setActiveArea({
+        position: 'absolute',
+        top: '640px',
+        left: '50%',
+        right: '50%',
+        height: '50px',
+        width: '50px'
+    }, true, true).setView([38.9637, 35.2433], 8);
     L.tileLayer('assets/turkey/{z}/{x}/{y}.png', {
         maxZoom: 8,
         minZoom: 1,
     }).addTo(map);
 
+    L.marker([38.9637, 35.2433], {
+        draggable: false
+    })
+        .bindPopup('<b>' + 'sdfsdf' + '</b><br>' + 'loremIpsum')
+        .bindTooltip('<b>' + 'dsfsdf' + '</b>',
+            {}
+        )
+        .addTo(map)
+
     let radarIndex = 1;
     $('#zoom-in').click(function () {
         map.zoomIn(1);
-        if (radarIndex != 1){
+        if (radarIndex != 1) {
             radarIndex = radarIndex - 1;
         }
         let radarSrc = `assets/images/radar/radar_${radarIndex}.svg`
@@ -18,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('#zoom-out').click(function () {
         map.zoomOut(1);
-        if (radarIndex != 8){
+        if (radarIndex != 8) {
             radarIndex = radarIndex + 1;
         }
         let radarSrc = `assets/images/radar/radar_${radarIndex}.svg`
@@ -94,15 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
         $('#pan-value').html(`${panIndex * 10}˚`)
     });
 
-    $('.dropdown-button').on('click', function() {
+    $('.dropdown-button').on('click', function () {
         $('.dropdown-menu').not($(this).siblings('.dropdown-menu')).addClass('hidden');
-            
-            // Toggle the dropdown menu related to this button
-            $(this).siblings('.dropdown-menu').toggleClass('hidden');
+
+        // Toggle the dropdown menu related to this button
+        $(this).siblings('.dropdown-menu').toggleClass('hidden');
     });
 
     // Close the dropdown if clicked outside
-    $(document).on('click', function(e) {
+    $(document).on('click', function (e) {
         if (!$(e.target).closest('.dropdown-button').length) {
             $('.dropdown-menu').addClass('hidden');
         }
