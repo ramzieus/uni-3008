@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rotate: true,
         rotateControl: false,
         // add rotation deg here 'bearing'
-        bearing: 40,
+        bearing: 100,
     }).setView([38.9637, 35.2433], 8);
     L.tileLayer('assets/turkey/{z}/{x}/{y}.png', {
         maxZoom: 8,
@@ -14,23 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
     let marker = L.marker([38.9637, 35.2433], {
         draggable: false
     }).addTo(map)
+    recenterMap();
 
-    let markerLatLng = marker.getLatLng();
-    let mapSize = map.getSize();
-    let zoom = map.getZoom();
-    let bearing = map.getBearing();
-    let bearingRad = bearing * Math.PI / 180;
-    let offset = mapSize.y * 0.26;
-    let offsetX = Math.sin(bearingRad) * offset;
-    let offsetY = Math.cos(bearingRad) * offset;
-    let markerPoint = map.project(markerLatLng, zoom);
-    let targetPoint = markerPoint.subtract([offsetX, offsetY]);
-    let newCenter = map.unproject(targetPoint, zoom);
-    map.setView(newCenter, zoom, {animate: false});
+    function recenterMap() {
+        let markerLatLng = marker.getLatLng();
+        let mapSize = map.getSize();
+        let zoom = map.getZoom();
+        let bearing = map.getBearing();
+        let bearingRad = bearing * Math.PI / 180;
+        let offset = mapSize.y * 0.26;
+        let offsetX = Math.sin(bearingRad) * offset;
+        let offsetY = Math.cos(bearingRad) * offset;
+        let markerPoint = map.project(markerLatLng, zoom);
+        let targetPoint = markerPoint.subtract([offsetX, offsetY]);
+        let newCenter = map.unproject(targetPoint, zoom);
+        map.setView(newCenter, zoom, { animate: false });
+    }
 
     let radarIndex = 1;
     $('#zoom-in').click(function () {
         map.zoomIn(1);
+        map.on('zoomend', function (e) {
+            recenterMap();
+        });
+
         if (radarIndex != 1) {
             radarIndex = radarIndex - 1;
         }
@@ -41,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('#zoom-out').click(function () {
         map.zoomOut(1);
+        map.on('zoomend', function (e) {
+            recenterMap();
+        });
         if (radarIndex != 8) {
             radarIndex = radarIndex + 1;
         }
