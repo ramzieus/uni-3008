@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     let map = L.map('map', {
-        center: [0, 0],
         zoomControl: false,
         rotate: true,
-        rotateControl: {
-            closeOnZeroBearing: false,
-        },
+        rotateControl: false,
         // add rotation deg here 'bearing'
-        bearing: 0,
+        bearing: 40,
     }).setView([38.9637, 35.2433], 8);
     L.tileLayer('assets/turkey/{z}/{x}/{y}.png', {
         maxZoom: 8,
@@ -29,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let markerPoint = map.project(markerLatLng, zoom);
     let targetPoint = markerPoint.subtract([offsetX, offsetY]);
     let newCenter = map.unproject(targetPoint, zoom);
-    map.setView(newCenter, zoom, { animate: false });
+    map.setView(newCenter, zoom, {animate: false});
 
     let radarIndex = 1;
     $('#zoom-in').click(function () {
