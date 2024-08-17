@@ -95,7 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     $('.dropdown-button').on('click', function() {
-        $('.dropdown-menu').toggleClass('hidden');
+        $('.dropdown-menu').not($(this).siblings('.dropdown-menu')).addClass('hidden');
+            
+            // Toggle the dropdown menu related to this button
+            $(this).siblings('.dropdown-menu').toggleClass('hidden');
     });
 
     // Close the dropdown if clicked outside
