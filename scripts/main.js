@@ -8,27 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // add rotation deg here 'bearing'
         bearing: 0,
-    }).setActiveArea({
-        position: 'absolute',
-        top: '640px',
-        left: '50%',
-        right: '50%',
-        height: '50px',
-        width: '50px'
-    }, true, true).setView([38.9637, 35.2433], 8);
+    }).setView([38.9637, 35.2433], 8);
     L.tileLayer('assets/turkey/{z}/{x}/{y}.png', {
         maxZoom: 8,
         minZoom: 1,
     }).addTo(map);
 
-    L.marker([38.9637, 35.2433], {
+    let marker = L.marker([38.9637, 35.2433], {
         draggable: false
-    })
-        .bindPopup('<b>' + 'sdfsdf' + '</b><br>' + 'loremIpsum')
-        .bindTooltip('<b>' + 'dsfsdf' + '</b>',
-            {}
-        )
-        .addTo(map)
+    }).addTo(map)
+
+    let markerLatLng = marker.getLatLng();
+    let mapSize = map.getSize();
+    let zoom = map.getZoom();
+    let bearing = map.getBearing();
+    let bearingRad = bearing * Math.PI / 180;
+    let offset = mapSize.y * 0.26;
+    let offsetX = Math.sin(bearingRad) * offset;
+    let offsetY = Math.cos(bearingRad) * offset;
+    let markerPoint = map.project(markerLatLng, zoom);
+    let targetPoint = markerPoint.subtract([offsetX, offsetY]);
+    let newCenter = map.unproject(targetPoint, zoom);
+    map.setView(newCenter, zoom, { animate: false });
 
     let radarIndex = 1;
     $('#zoom-in').click(function () {
