@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close the dropdown if clicked outside
     $(document).on('click', function (e) {
-        if (!$(e.target).closest('.dropdown-button').length) {
+        if (!$(e.target).closest('.dropdown-button, .dropdown-menu').length) {
             $('.dropdown-menu').addClass('hidden');
         }
     });
